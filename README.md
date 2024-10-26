@@ -29,7 +29,7 @@ N/A
 
 ## Usage
 
-To use this app, navigate to the home page on ![Render](https://note-taker-5nfs.onrender.com), press the button that leads to the notes page, and write a note on the right-side panel. Upon clicking the Save button that appears in the upper right hand corner of the page, the note will be posted to the db.json in the backend and saved for future viewing, which can be verified by refreshing the page and seeing that your note has been added to the list of saved notes on the left-hand panel.
+To use this app, navigate to the home page on [Render](https://note-taker-5nfs.onrender.com), press the button that leads to the notes page, and write a note on the right-side panel. Upon clicking the Save button that appears in the upper right hand corner of the page, the note will be posted to the db.json in the backend and saved for future viewing, which can be verified by refreshing the page and seeing that your note has been added to the list of saved notes on the left-hand panel.
 
 ## Contributing
 
