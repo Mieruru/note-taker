@@ -26,7 +26,18 @@ notes.get('/', (req, res) => {
 
 // POST Route for a new note
 notes.post('/', (req, res) => {
+  // create new note from request
+  let newNote = req.body
+  newNote.id = uuidv4()
 
+  // read db.json and return notes
+  const notes = returnNotes()
+
+  // add new note to notes array
+  notes.push(newNote)
+
+  // write notes back to db.json
+  fs.writeFileSync(path.join(__dirname, '../db/db.json'), JSON.stringify(notes, null, 2))
 });
 
 // DELETE Route for a specific note
