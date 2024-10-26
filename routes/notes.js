@@ -5,9 +5,23 @@ const { v4: uuidv4 } = require('uuid');
 const fs = require('fs')
 const path = require('path')
 
+// function to compile notes from db.json
+const returnNotes = () => {
+  // read db.json
+  const data = fs.readFileSync(path.join(__dirname, '../db/db.json'), 'utf8')
+
+  // parse data to get array
+  const notes = JSON.parse(data)
+
+  // return notes
+  return notes
+}
+
 // GET Route for retrieving all the notes
 notes.get('/', (req, res) => {
-
+  // read db.json and return notes
+  const notes = returnNotes()
+  res.status(200).send(notes)
 });
 
 // POST Route for a new note
