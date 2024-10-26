@@ -43,6 +43,11 @@ notes.post('/', (req, res) => {
 // DELETE Route for a specific note
 notes.delete('/:id', (req, res) => {
   // TODO IF TIME PERMITTING SINCE OPTIONAL
+  // read db.json and filter out note by ID
+  const notes = returnNotes().filter((note) => note.id !== req.params.id)
+
+  // write notes back to db.json
+  fs.writeFileSync(path.join(__dirname, '../db/db.json'), JSON.stringify(notes, null, 2))
 });
 
 module.exports = notes;
