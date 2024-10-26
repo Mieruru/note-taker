@@ -42,7 +42,7 @@ notes.post('/', (req, res) => {
 
 // DELETE Route for a specific note
 notes.delete('/:id', (req, res) => {
-
+  // TODO IF TIME PERMITTING SINCE OPTIONAL
 });
 
 module.exports = notes;
